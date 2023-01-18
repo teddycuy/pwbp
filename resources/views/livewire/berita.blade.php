@@ -31,6 +31,9 @@
                                 <i>
                                     {{ $item->isi_komentar }}
                                 </i>
+                                <button class="float-end btn btn-danger" wire:click="hapus('{{ $item->id }}')">
+                                    Hapus
+                                </button>
                             </p>
                             <hr>
                         @endforeach

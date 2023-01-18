@@ -15,6 +15,13 @@ class Berita extends Component
         $simpan->save();
         $this->reset();
     }
+    public function hapus($idhapus)
+    {
+        $hapus = Komentar::findOrFail($idhapus);
+        $hapus->delete();
+        $this->reset();
+    }
+
     public function render()
     {
         return view('livewire.berita', [
